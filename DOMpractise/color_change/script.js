@@ -4,23 +4,28 @@ const body = document.querySelector('body');
 
 buttons.forEach((button) => {
   console.log(button);
-  button.addEventListener('click', (e) => {
+  button.addEventListener('mouseover', (e) => {
     console.log(e);
     console.log(e.target);
-    if (e.target.id == 'grey') {
-      body.style.backgroundColor = e.target.id;
-    }
-    if (e.target.id == 'white') {
-      body.style.backgroundColor = e.target.id;
-    }
-    if (e.target.id == 'blue') {
-      body.style.backgroundColor = e.target.id;
-    }
-    if (e.target.id == 'yellow') {
-      body.style.backgroundColor = e.target.id;
-    }
-    if (e.target.id == 'purple') {
-      body.style.backgroundColor = e.target.id;
+    switch(e.target.id){
+      case "grey":
+        body.style.background = 'grey';
+        break;
+      case "white":
+        body.style.background = 'white';
+        break;
+      case "blue":
+        body.style.background = 'blue';
+        break;
+      case "yellow":
+        body.style.background = 'yellow';
+        break;
+      case "purple":
+        body.style.background = 'purple';
+        break;
+
+      
+
     }
   });
 });
